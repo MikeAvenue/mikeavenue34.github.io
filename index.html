@@ -1,66 +1,629 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mike Avenue</title>
+
+<title>Mike Avenue | Hard Rock Poético</title>
+
+<meta name="description" content="Mike Avenue — Hard Rock Poético. Fragmentos de un Corazón en Ruinas. Al Final de la Avenida 34.">
+
 <style>
+
+*{
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
-font-family:Arial,sans-serif;
-background:#090909;
-color:white;
+font-family:Georgia,"Times New Roman",serif;
+background:#050505;
+color:#f5f5f5;
 text-align:center;
-padding:40px 20px;
 }
-img{
-width:220px;
-max-width:80%;
-border-radius:10px;
-margin-bottom:20px;
+
+/* CONTENEDOR */
+
+.container{
+width:100%;
+max-width:1050px;
+margin:auto;
+padding:0 25px;
 }
-h1{
-font-size:48px;
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+padding:70px 20px;
+background:
+radial-gradient(circle at center,#161616 0%,#080808 45%,#000000 100%);
+}
+
+.hero-content{
+max-width:850px;
+width:100%;
+}
+
+.kicker{
+font-family:Arial,sans-serif;
+font-size:13px;
+letter-spacing:5px;
 color:#D4AF37;
-margin-bottom:10px;
+text-transform:uppercase;
+margin-bottom:30px;
 }
-h2{
-font-weight:normal;
-color:#d9c27c;
+
+.line{
+width:180px;
+height:1px;
+background:#D4AF37;
+margin:25px auto;
+opacity:.7;
+}
+
+h1{
+font-size:clamp(48px,9vw,100px);
+letter-spacing:8px;
+margin:0;
+color:#D4AF37;
+font-weight:500;
+text-shadow:0 0 15px rgba(212,175,55,.15);
+}
+
+.subtitle{
+font-size:clamp(18px,3vw,27px);
+letter-spacing:4px;
+color:#eeeeee;
+margin-top:22px;
+}
+
+.slogan{
+font-size:clamp(20px,4vw,34px);
+letter-spacing:2px;
+color:#D4AF37;
+margin-top:38px;
+}
+
+.album-label{
+font-family:Arial,sans-serif;
+font-size:12px;
+letter-spacing:5px;
+color:#888;
+margin-top:28px;
+text-transform:uppercase;
+}
+
+.album-name{
+font-size:clamp(24px,5vw,42px);
+letter-spacing:3px;
+color:#ffffff;
+margin-top:12px;
+}
+
+.description{
+max-width:650px;
+margin:25px auto 40px;
+font-family:Arial,sans-serif;
+font-size:15px;
+line-height:1.8;
+color:#aaa;
+}
+
+/* BOTONES */
+
+.buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+min-width:190px;
+padding:14px 24px;
+border:1px solid #D4AF37;
+background:#080808;
+color:#D4AF37;
+text-decoration:none;
+font-family:Arial,sans-serif;
+font-size:12px;
+font-weight:bold;
+letter-spacing:2px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#D4AF37;
+color:#050505;
+}
+
+/* SECCIONES */
+
+section{
+padding:90px 20px;
+border-top:1px solid rgba(212,175,55,.18);
+}
+
+.section-title{
+font-size:clamp(30px,5vw,48px);
+letter-spacing:5px;
+color:#D4AF37;
+font-weight:500;
+margin:0 0 15px;
+}
+
+.section-subtitle{
+font-family:Arial,sans-serif;
+font-size:13px;
+letter-spacing:3px;
+color:#777;
+margin-bottom:45px;
+}
+
+/* ALBUM */
+
+.album-card{
+max-width:800px;
+margin:auto;
+padding:50px 30px;
+background:#090909;
+border:1px solid rgba(212,175,55,.45);
+}
+
+.album-title{
+font-size:clamp(27px,5vw,42px);
+letter-spacing:3px;
+color:#ffffff;
+margin-bottom:12px;
+}
+
+.album-location{
+font-family:Arial,sans-serif;
+font-size:12px;
+letter-spacing:4px;
+color:#D4AF37;
 margin-bottom:40px;
 }
-a{
-display:block;
-background:#D4AF37;
-color:black;
-text-decoration:none;
-padding:15px;
-margin:15px auto;
-max-width:320px;
-border-radius:12px;
-font-weight:bold;
+
+.track-list{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:0 30px;
+max-width:650px;
+margin:auto;
 }
+
+.track{
+padding:16px 8px;
+border-bottom:1px solid rgba(212,175,55,.15);
+color:#ccc;
+font-family:Arial,sans-serif;
+font-size:14px;
+text-align:left;
+}
+
+.track-number{
+color:#D4AF37;
+margin-right:10px;
+}
+
+/* HISTORIA */
+
+.story{
+max-width:750px;
+margin:auto;
+font-family:Arial,sans-serif;
+line-height:1.9;
+color:#aaa;
+font-size:16px;
+}
+
+.story strong{
+color:#D4AF37;
+}
+
+/* REDES */
+
+.social-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+max-width:750px;
+margin:auto;
+}
+
+.social{
+padding:17px;
+border:1px solid rgba(212,175,55,.35);
+color:#D4AF37;
+text-decoration:none;
+font-family:Arial,sans-serif;
+font-size:13px;
+letter-spacing:1px;
+transition:.3s;
+}
+
+.social:hover{
+background:#D4AF37;
+color:#050505;
+}
+
+/* CONTACTO */
+
+.contact{
+max-width:650px;
+margin:auto;
+font-family:Arial,sans-serif;
+color:#999;
+line-height:1.9;
+}
+
+.contact strong{
+color:#D4AF37;
+}
+
+/* FOOTER */
+
+footer{
+padding:45px 20px;
+border-top:1px solid rgba(212,175,55,.18);
+font-family:Arial,sans-serif;
+font-size:11px;
+color:#555;
+letter-spacing:2px;
+}
+
+/* MOVIL */
+
+@media(max-width:650px){
+
+.hero{
+min-height:90vh;
+padding:60px 15px;
+}
+
+h1{
+letter-spacing:4px;
+}
+
+.subtitle{
+letter-spacing:2px;
+}
+
+.track-list{
+grid-template-columns:1fr;
+}
+
+.social-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.btn{
+width:100%;
+max-width:330px;
+}
+
+section{
+padding:70px 15px;
+}
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- PORTADA -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="kicker">
+Hard Rock Poético
+</div>
+
+<div class="line"></div>
+
 <h1>MIKE AVENUE</h1>
 
-<h2>Fragmentos de un Corazón en Ruinas</h2>
+<div class="line"></div>
 
-<a href="https://open.spotify.com/intl-es/artist/70XVCq8jwThiS4dNeQ3tYN">Spotify</a>
+<div class="slogan">
+Fragmentos de un Corazón en Ruinas
+</div>
 
-<a href="https://music.apple.com/es/artist/mike-avenue/1869714380">Apple Music</a>
+<div class="album-label">
+ÁLBUM
+</div>
 
-<a href="https://www.youtube.com/@mikeavenue34">YouTube</a>
+<div class="album-name">
+Al Final de la Avenida 34
+</div>
 
-<a href="https://www.instagram.com/mikeavenue34/">Instagram</a>
+<p class="description">
+Canciones nacidas de la nostalgia, las historias,
+las despedidas y todo aquello que permanece cuando
+una historia llega a su final.
+</p>
 
-<a href="https://www.tiktok.com/@mikeavenue34">TikTok</a>
+<div class="buttons">
 
-<a href="https://www.facebook.com/mikeavenuecantautor">Facebook</a>
-  <!-- Mike Avenue -->
+<a class="btn"
+href="https://open.spotify.com/intl-es/artist/70XVCq8jwThiS4dNeQ3tYN"
+target="_blank">
+SPOTIFY
+</a>
+
+<a class="btn"
+href="https://music.apple.com/es/artist/mike-avenue/1869714380"
+target="_blank">
+APPLE MUSIC
+</a>
+
+<a class="btn"
+href="https://www.youtube.com/@mikeavenue34"
+target="_blank">
+YOUTUBE
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ÁLBUM -->
+
+<section id="musica">
+
+<div class="container">
+
+<h2 class="section-title">
+AL FINAL DE LA AVENIDA 34
+</h2>
+
+<p class="section-subtitle">
+ÁLBUM · MIKE AVENUE
+</p>
+
+<div class="album-card">
+
+<div class="album-title">
+Fragmentos de un Corazón en Ruinas
+</div>
+
+<div class="album-location">
+9 CANCIONES
+</div>
+
+<div class="track-list">
+
+<div class="track">
+<span class="track-number">01</span>
+Bajo la Luna
+</div>
+
+<div class="track">
+<span class="track-number">02</span>
+Rumbo a las Estrellas
+</div>
+
+<div class="track">
+<span class="track-number">03</span>
+Bruja Psicópata
+</div>
+
+<div class="track">
+<span class="track-number">04</span>
+Instinto Animal
+</div>
+
+<div class="track">
+<span class="track-number">05</span>
+Dame Más
+</div>
+
+<div class="track">
+<span class="track-number">06</span>
+De Vuelta al Viento
+</div>
+
+<div class="track">
+<span class="track-number">07</span>
+Ya No Encajan las Cosas
+</div>
+
+<div class="track">
+<span class="track-number">08</span>
+Otros Momentos
+</div>
+
+<div class="track">
+<span class="track-number">09</span>
+Descontrol
+</div>
+
+</div>
+
+<div class="buttons">
+
+<a class="btn"
+href="https://open.spotify.com/intl-es/artist/70XVCq8jwThiS4dNeQ3tYN"
+target="_blank">
+ESCUCHAR ÁLBUM
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HISTORIA -->
+
+<section id="historia">
+
+<div class="container">
+
+<h2 class="section-title">
+EL UNIVERSO DE MIKE AVENUE
+</h2>
+
+<p class="section-subtitle">
+AL FINAL DE LA AVENIDA 34
+</p>
+
+<div class="story">
+
+<p>
+<strong>Al Final de la Avenida 34</strong> es el universo
+donde nacen las canciones de Mike Avenue.
+</p>
+
+<p>
+Historias, recuerdos, nostalgia, rupturas y emociones
+convertidas en canciones de <strong>Hard Rock Poético</strong>.
+</p>
+
+<p>
+<strong>Fragmentos de un Corazón en Ruinas</strong> es la frase
+que resume el espíritu emocional de este proyecto:
+lo que queda después de amar, perder y seguir adelante.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REDES -->
+
+<section id="redes">
+
+<div class="container">
+
+<h2 class="section-title">
+SÍGUEME
+</h2>
+
+<p class="section-subtitle">
+MIKE AVENUE
+</p>
+
+<div class="social-grid">
+
+<a class="social"
+href="https://www.instagram.com/mikeavenue34/"
+target="_blank">
+INSTAGRAM
+</a>
+
+<a class="social"
+href="https://www.tiktok.com/@mikeavenue34"
+target="_blank">
+TIKTOK
+</a>
+
+<a class="social"
+href="https://www.facebook.com/mikeavenuecantautor"
+target="_blank">
+FACEBOOK
+</a>
+
+<a class="social"
+href="https://www.youtube.com/@mikeavenue34"
+target="_blank">
+YOUTUBE
+</a>
+
+<a class="social"
+href="https://open.spotify.com/intl-es/artist/70XVCq8jwThiS4dNeQ3tYN"
+target="_blank">
+SPOTIFY
+</a>
+
+<a class="social"
+href="https://music.apple.com/es/artist/mike-avenue/1869714380"
+target="_blank">
+APPLE MUSIC
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+<div class="container">
+
+<h2 class="section-title">
+CONTACTO
+</h2>
+
+<div class="contact">
+
+<p>
+Presentaciones · Prensa · Colaboraciones · Management
+</p>
+
+<p>
+<strong>Mike Avenue</strong><br>
+Puebla, México
+</p>
+
+<p>
+Management: <strong>Lucy Bell</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+MIKE AVENUE · HARD ROCK POÉTICO
+
+<br><br>
+
+© 2026 Mike Avenue
+
+</footer>
+
 
 </body>
+
 </html>
