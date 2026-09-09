@@ -350,15 +350,19 @@ padding:70px 15px;
     height:260px;
     object-fit:cover;
     display:block;
+  transition:transform .45s ease, filter .45s ease;
 }
 
 /* Ajuste especial para la segunda foto */
 .live-gallery .gallery-item:nth-child(2) img{
-    object-position:center 20%;
+    object-position:center 8%;
 }
-
+.live-gallery .gallery-item:nth-child(9) img{
+    object-position:center 15%;
+}
 .gallery-item img:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
+    filter:brightness(1.08);
 }
  /* ===== RECONOCIMIENTOS ===== */
 
