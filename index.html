@@ -391,15 +391,28 @@ padding:70px 15px;
     margin:40px auto 0;
 }
 
+.recognition-gallery{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
 .recognition-gallery img{
     width:100%;
+    max-width:700px;
     max-height:420px;
     object-fit:contain;
     display:block;
+    margin:0 auto;
     border:2px solid #D4AF37;
     border-radius:14px;
     box-shadow:0 0 20px rgba(212,175,55,.25);
     background:#111;
+    transition:transform .4s ease;
+}
+
+.recognition-gallery img:hover{
+    transform:scale(1.03);
 }
 </style>
 
@@ -767,14 +780,11 @@ MIKE AVENUE · HARD ROCK POÉTICO
             a través de los escenarios, las experiencias compartidas
             y el reconocimiento recibido por su trabajo artístico.
         </p>
-
-       <div class="recognition-gallery">
+<div class="recognition-gallery">
     <img src="MIKEFERIACHIAU-53.jpg"
          alt="Reconocimiento a Mike Avenue">
-
 </div>
     </div>
-
 </section>
 
 <section id="contacto">
