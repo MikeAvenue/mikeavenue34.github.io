@@ -355,7 +355,7 @@ padding:70px 15px;
 
 /* Ajuste especial para la segunda foto */
 .live-gallery .gallery-item:nth-child(2) img{
-    object-position:center 8%;
+    object-position:center 22%;
 }
 .live-gallery .gallery-item:nth-child(9) img{
     object-position:center 15%;
@@ -363,6 +363,64 @@ padding:70px 15px;
 .gallery-item img:hover{
     transform:scale(1.08);
     filter:brightness(1.08);
+}
+ /* ===== EXPERIENCIA EN VIVO ===== */
+
+.live-experience{
+    padding:100px 20px;
+    background:
+        linear-gradient(rgba(5,5,5,.75), rgba(5,5,5,.85)),
+        url("MIKEFERIACHIAU-24.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.live-experience h2{
+    color:#D4AF37;
+    font-size:2.3rem;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.live-experience p{
+    max-width:850px;
+    margin:0 auto 50px;
+    color:#E6E6E6;
+    line-height:1.8;
+}
+
+.live-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    max-width:900px;
+    margin:40px auto;
+}
+
+.stat-card{
+    background:#111;
+    border:1px solid #D4AF37;
+    border-radius:16px;
+    padding:30px 20px;
+    transition:.4s ease;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(212,175,55,.35);
+}
+
+.stat-number{
+    color:#D4AF37;
+    font-size:2.4rem;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.stat-text{
+    color:#ddd;
+    letter-spacing:1px;
 }
  /* ===== RECONOCIMIENTOS ===== */
 
@@ -795,6 +853,44 @@ letter-spacing:2px;
 ">
 MIKE AVENUE · HARD ROCK POÉTICO
 </p>
+
+</section>
+ <section class="live-experience">
+
+    <div class="container">
+
+        <h2>EXPERIENCIA EN VIVO</h2>
+
+        <p>
+            Mike Avenue transforma cada presentación en una experiencia cinematográfica,
+            donde la nostalgia, la fuerza y la conexión con el público se convierten
+            en parte de la historia de cada canción.
+        </p>
+
+        <div class="live-stats">
+
+            <div class="stat-card">
+                <div class="stat-number">9</div>
+                <div class="stat-text">CANCIONES ORIGINALES</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">PUEBLA</div>
+                <div class="stat-text">MÉXICO</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">2026</div>
+                <div class="stat-text">FRAGMENTOS DE UN CORAZÓN EN RUINAS</div>
+            </div>
+
+        </div>
+
+        <p style="font-style:italic;color:#D4AF37;font-size:1.2rem;margin-top:40px;">
+            “Las historias no terminan cuando acaba la canción. Apenas comienzan.”
+        </p>
+
+    </div>
 
 </section>
 <!-- RECONOCIMIENTO -->
