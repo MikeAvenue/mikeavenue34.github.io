@@ -44,10 +44,23 @@ justify-content:center;
 position:relative;
 padding:40px 20px 90px;
 background:
-linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.72)),
-url("44151492-9e5a-4a64-b484-ac104fb784fe.png") center 25%/cover no-repeat;
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.82)),
+    url("44151492-9e5a-4a64-b484-ac104fb784fe.png")
+    center 35% / cover no-repeat;
 }
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
 
+    background:
+        radial-gradient(circle at center,
+        rgba(212,175,55,.18),
+        transparent 55%);
+
+    mix-blend-mode:screen;
+    pointer-events:none;
+}
 .hero-content{
  max-width:850px;
     width:100%;
