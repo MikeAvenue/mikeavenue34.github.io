@@ -70,14 +70,16 @@ background:#D4AF37;
 margin:25px auto;
 opacity:.7;
 }
-
 h1{
-font-size:clamp(48px,9vw,100px);
-letter-spacing:8px;
-margin:0;
-color:#D4AF37;
-font-weight:500;
-text-shadow:0 0 15px rgba(212,175,55,.15);
+    font-size:clamp(52px,9vw,96px);
+    color:#D4AF37;
+    letter-spacing:4px;
+    line-height:1;
+    margin:20px 0;
+    font-weight:600;
+    text-shadow:
+        0 0 10px rgba(212,175,55,.35),
+        0 0 35px rgba(212,175,55,.18);
 }
 
 .subtitle{
@@ -88,10 +90,11 @@ margin-top:22px;
 }
 
 .slogan{
-font-size:clamp(20px,4vw,34px);
-letter-spacing:2px;
-color:#D4AF37;
-margin-top:38px;
+    color:#E8D18A;
+    font-size:clamp(22px,3vw,38px);
+    letter-spacing:1px;
+    margin:18px 0 10px;
+    text-shadow:0 0 18px rgba(212,175,55,.18);
 }
 
 .album-label{
@@ -122,6 +125,51 @@ color:#aaa;
 /* BOTONES */
 
 .buttons{
+ .hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.btn-gold,
+.btn-outline{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 26px;
+    border-radius:40px;
+    text-decoration:none;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+    transition:all .35s ease;
+}
+
+.btn-gold{
+    background:#D4AF37;
+    color:#050505;
+    border:1px solid #D4AF37;
+}
+
+.btn-gold:hover{
+    background:#F0C75E;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    background:rgba(0,0,0,.55);
+    color:#D4AF37;
+    border:1px solid #D4AF37;
+}
+
+.btn-outline:hover{
+    background:#D4AF37;
+    color:#050505;
+    transform:translateY(-2px);
+}
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
@@ -532,11 +580,21 @@ las despedidas y todo aquello que permanece cuando
 una historia llega a su final.
 </p>
 <div class="hero-buttons">
-    <a href="#musica" class="btn-gold">▶ Escuchar el álbum</a>
+   <div class="hero-buttons">
 
-    <a href="#momentos" class="btn-outline">📸 Momentos en vivo</a>
+  <a href="#musica" class="btn-gold">
+    ESCUCHAR EL ÁLBUM
+  </a>
 
-    <a href="#contacto" class="btn-outline">📩 Contrataciones</a>
+  <a href="#momentos" class="btn-outline">
+    MOMENTOS EN VIVO
+  </a>
+
+  <a href="#contacto" class="btn-outline">
+    CONTRATACIONES
+  </a>
+
+</div>
 </div>
 <div class="buttons">
 
