@@ -45,13 +45,13 @@ position:relative;
 padding:40px 20px 90px;
 background:
 linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.72)),
-url("44151492-9e5a-4a64-b484-ac104fb784fe.png") center 18%/cover no-repeat;
+url("44151492-9e5a-4a64-b484-ac104fb784fe.png") center 25%/cover no-repeat;
 }
 
 .hero-content{
  max-width:850px;
     width:100%;
-    transform:translateY(60px);
+   transform:translateY(120px);
 }
 
 .kicker{
@@ -133,18 +133,21 @@ color:#aaa;
     margin-top:40px;
 }
 
-.btn-gold,
-.btn-outline{
+.btn-gold{
     display:inline-flex;
     align-items:center;
     justify-content:center;
     padding:14px 26px;
     border-radius:40px;
-    text-decoration:none;
+    background:#D4AF37;
+    color:#050505 !important;
+    border:1px solid #D4AF37;
+    text-decoration:none !important;
     font-family:Arial,sans-serif;
     font-size:13px;
     font-weight:bold;
     letter-spacing:2px;
+    text-transform:uppercase;
     transition:all .35s ease;
 }
 
@@ -199,9 +202,107 @@ margin-top:30px;
     box-shadow:0 0 18px rgba(212,175,55,.45);
     transform:translateY(-2px);
 }
-
+#musica{
+    position:relative;
+    padding:110px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.88), rgba(0,0,0,.92)),
+        radial-gradient(circle at top, rgba(212,175,55,.08), transparent 60%);
+    overflow:hidden;
+}
 /* SECCIONES */
+/* ===== ALBUM PLAYER ===== */
+.album-player{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:55px;
+    align-items:center;
+    margin-top:60px;
 
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(212,175,55,.18);
+    border-radius:28px;
+    padding:35px;
+    backdrop-filter:blur(12px);
+}
+
+.album-player img{
+    width:100%;
+    border-radius:22px;
+    border:2px solid #D4AF37;
+
+    box-shadow:
+        0 0 35px rgba(212,175,55,.30),
+        0 0 80px rgba(212,175,55,.10);
+
+    transition:all .45s ease;
+}
+.album-player img:hover{
+    transform:scale(1.04) rotate(-1deg);
+
+    box-shadow:
+        0 0 45px rgba(212,175,55,.55),
+        0 0 120px rgba(212,175,55,.20);
+}
+
+.track-list h3{
+    color:#D4AF37;
+    font-size:36px;
+    margin-bottom:25px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.track-list ul{
+    list-style:none;
+    padding:0;
+    margin:0 0 35px;
+}
+
+.track-list li{
+    padding:14px 18px;
+    margin-bottom:12px;
+    border-left:2px solid #D4AF37;
+    background:rgba(255,255,255,.03);
+    color:#EEE;
+    transition:.35s;
+}
+
+.track-list li{
+    padding:16px 20px;
+    margin-bottom:14px;
+    border-left:3px solid #D4AF37;
+    background:rgba(255,255,255,.04);
+    color:#F5F5F5;
+    border-radius:12px;
+    transition:all .35s ease;
+    font-size:17px;
+    letter-spacing:1px;
+}
+   display:flex;
+    align-items:center;
+    gap:14px;
+}
+ .track-list li:hover{
+    background:rgba(212,175,55,.12);
+    color:#D4AF37;
+    transform:translateX(10px);
+    box-shadow:0 0 25px rgba(212,175,55,.18);
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.album-player{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.track-list li{
+    text-align:left;
+}
+
+}
 section{
 padding:90px 20px;
 border-top:1px solid rgba(212,175,55,.18);
@@ -257,17 +358,31 @@ margin:auto;
 }
 
 .track{
-padding:16px 8px;
-border-bottom:1px solid rgba(212,175,55,.15);
-color:#ccc;
-font-family:Arial,sans-serif;
-font-size:14px;
-text-align:left;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:18px 8px;
+    border-bottom:1px solid rgba(212,175,55,.12);
+    color:#E6E6E6;
+    font-family:Arial,sans-serif;
+    font-size:16px;
+    text-align:left;
+    transition:all .35s ease;
 }
-
+.track:hover{
+    background:rgba(212,175,55,.08);
+    transform:translateX(8px);
+    border-left:3px solid #D4AF37;
+    padding-left:20px;
+    color:#D4AF37;
+}
 .track-number{
-color:#D4AF37;
-margin-right:10px;
+    color:#D4AF37;
+    font-size:20px;
+    font-weight:bold;
+    min-width:42px;
+    opacity:.95;
+    text-align:center;
 }
 
 /* HISTORIA */
@@ -629,84 +744,54 @@ YOUTUBE
 
 <div class="container">
 
-<h2 class="section-title">
-AL FINAL DE LA AVENIDA 34
-</h2>
+  <h2>ESCUCHA EL ÁLBUM</h2>
 
-<p class="section-subtitle">
-ÁLBUM · MIKE AVENUE
-</p>
+  <div class="line"></div>
 
-<div class="album-card">
+  <p class="description">
+    Al Final de la Avenida 34 es un viaje entre la nostalgia, el amor,
+    la oscuridad y la esperanza. Nueve canciones que forman una sola historia.
+  </p>
 
-<div class="album-title">
-Fragmentos de un Corazón en Ruinas
-</div>
+  <div class="album-player">
 
-<div class="album-location">
-9 CANCIONES
-</div>
+    <img src="44151492-9e5a-4a64-b484-ac104fb784fe.png" alt="Al Final de la Avenida 34">
 
-<div class="track-list">
+    <div class="track-list">
 
-<div class="track">
-<span class="track-number">01</span>
-Bajo la Luna
-</div>
+      <h3>AL FINAL DE LA AVENIDA 34</h3>
 
-<div class="track">
-<span class="track-number">02</span>
-Rumbo a las Estrellas
-</div>
+    <ul>
+  <li>01 · Ya No Encajan las Cosas</li>
+  <li>02 · Otros Momentos</li>
+  <li>03 · Dame Más</li>
+  <li>04 · Descontrol</li>
+  <li>05 · Bruja Psicópata</li>
+  <li>06 · Instinto Animal</li>
+  <li>07 · De Vuelta al Viento</li>
+  <li>08 · Rumbo a las Estrellas</li>
+  <li>09 · Bajo la Luna</li>
+</ul>
 
-<div class="track">
-<span class="track-number">03</span>
-Bruja Psicópata
-</div>
+      <div class="buttons">
 
-<div class="track">
-<span class="track-number">04</span>
-Instinto Animal
-</div>
+        <a class="btn" href="https://open.spotify.com/intl-es/artist/70XVCq8jwThiS4dNeQ3tYN" target="_blank">
+          Spotify
+        </a>
 
-<div class="track">
-<span class="track-number">05</span>
-Dame Más
-</div>
+        <a class="btn" href="https://music.apple.com/es/artist/mike-avenue/1869714380" target="_blank">
+          Apple Music
+        </a>
 
-<div class="track">
-<span class="track-number">06</span>
-De Vuelta al Viento
-</div>
+        <a class="btn" href="https://www.youtube.com/@mikeavenue34" target="_blank">
+          YouTube
+        </a>
 
-<div class="track">
-<span class="track-number">07</span>
-Ya No Encajan las Cosas
-</div>
+      </div>
 
-<div class="track">
-<span class="track-number">08</span>
-Otros Momentos
-</div>
+    </div>
 
-<div class="track">
-<span class="track-number">09</span>
-Descontrol
-</div>
-
-</div>
-
-<div class="buttons">
-
-<a class="btn"
-href="https://open.spotify.com/intl-es/artist/70XVCq8jwThiS4dNeQ3tYN"
-target="_blank">
-ESCUCHAR ÁLBUM
-</a>
-
-</div>
-
-</div>
+  </div>
 
 </div>
 
