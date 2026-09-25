@@ -592,18 +592,21 @@ color:#D4AF37;
 /* FOOTER */
 
 footer{
-padding:45px 20px;
-border-top:1px solid rgba(212,175,55,.18);
-font-family:Arial,sans-serif;
-font-size:11px;
-color:#555;
-letter-spacing:2px;
+    padding:45px 20px;
+    border-top:1px solid rgba(212,175,55,.18);
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    color:#555;
+    letter-spacing:2px;
+}
+
+/* Evita que el menú fijo tape las secciones */
+section{
+    scroll-margin-top:120px;
 }
 
 /* MOVIL */
-
 @media(max-width:650px){
-
 .hero{
 min-height:90vh;
 padding:60px 15px;
