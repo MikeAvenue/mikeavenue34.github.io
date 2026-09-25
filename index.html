@@ -345,7 +345,49 @@ margin-top:30px;
         0 0 45px rgba(212,175,55,.55),
         0 0 120px rgba(212,175,55,.20);
 }
+.album-player .buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+    .album-player .buttons a{
+    text-decoration:none;
+    color:inherit;
+}
+.album-player .buttons a{
+    text-decoration:none;
+}
+.album-player .btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
 
+    min-width:180px;
+    padding:16px 28px;
+
+    background:#000000;
+    color:#D4AF37;
+
+    border:1px solid #D4AF37;
+    border-radius:40px;
+
+    text-decoration:none;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    transition:.35s ease;
+}
+
+.album-player .btn:hover{
+    background:#D4AF37;
+    color:#050505;
+    transform:translateY(-3px);
+}
 .track-list h3{
     color:#D4AF37;
     font-size:36px;
@@ -874,7 +916,7 @@ YOUTUBE
   <li>09 · Bajo la Luna</li>
 </ul>
 
-      <div class="buttons">
+      <div class="buttons album-buttons">
 
         <a class="btn" href="https://open.spotify.com/intl-es/artist/70XVCq8jwThiS4dNeQ3tYN" target="_blank">
           Spotify
